@@ -128,6 +128,38 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
+                  Container(
+                    margin: EdgeInsets.only(
+                        top: MediaQuery.of(context).size.height * 0.02),
+                    child: Text.rich(
+                      TextSpan(
+                        text: "atau",
+                        style: GoogleFonts.montserrat(
+                          textStyle: TextStyle(
+                            color: whiteTextColor,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(
+                        top: MediaQuery.of(context).size.height * 0.02),
+                    child: Text.rich(
+                      TextSpan(
+                        text: "Masuk sebagai pengunjung",
+                        style: TextStyle(color: secondaryColor, fontSize: 16),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Home("guest")));
+                          },
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -15,7 +15,7 @@ class NavDrawer extends StatelessWidget {
     List temp = nameTemp.split("@");
     String nameTemp2 = temp.elementAt(0);
     String name = nameTemp2[0].toUpperCase() + nameTemp2.substring(1);
-    final email = emailData;
+    String email = emailData;
     return Drawer(
       child: Material(
         color: primaryColor,
@@ -32,9 +32,9 @@ class NavDrawer extends StatelessWidget {
               padding: padding,
               child: Column(
                 children: [
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 8),
                   Divider(color: Colors.white70),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 8),
                   buildMenuItem(
                     text: 'Keluar',
                     icon: Icons.logout_rounded,
